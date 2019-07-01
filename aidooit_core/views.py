@@ -4,4 +4,4 @@ from django.http import HttpResponse
 
 def index(request):
     """Home page for aidooit."""
-    return HttpResponse('Hello, your are in aidooit index :D')
+    return HttpResponse('Hello, your are in Aidooit index :D')
