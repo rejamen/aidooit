@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404, render
 from .models import Person
 
 
-def index(request):
+def people_index(request):
     """Home page for aidooit people."""
     people_list = Person.objects.order_by('name')[:10]
     template = 'aidooit_people/index.html'
