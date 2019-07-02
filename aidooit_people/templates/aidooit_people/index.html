@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People index</title>
+</head>
+<body>
+    <h1>Your are in people index :)</h1>
+    {% if people_list %}
+        <ul>
+            {% for person in people_list %}
+                <li><a href="{% url 'person_details' person.id %}">{{ person }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No people are available :(</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person details</title>
+</head>
+<body>
+    <h1>Your are looking details for:</h1>
+    {% if person %}
+        <p>{{ person }}</p>
+        <p>{{ person.mobile }}</p>
+        <p>{{ person.phone }}</p>
+        <p>{{ person.email }}</p>
+    {% endif %}
+</body>
+</html>
