@@ -6,10 +6,11 @@
 <body>
     <h1>Your are looking details for:</h1>
     {% if person %}
-        <p>{{ person }}</p>
-        <p>{{ person.mobile }}</p>
-        <p>{{ person.phone }}</p>
-        <p>{{ person.email }}</p>
+        <li> Name: {{ person }}</li>
+        <li> mobile: {{ person.mobile }}</li>
+        <li> phone: {{ person.phone }}</li>
+        <li> email: {{ person.email }}</li>
     {% endif %}
+
 </body>
 </html>

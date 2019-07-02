@@ -1,24 +1,23 @@
 """Core views for aidooit people."""
 from django.shortcuts import get_object_or_404, render
+from django.views import generic
 
 from .models import Person
 
 
-def people_index(request):
-    """Home page for aidooit people."""
-    people_list = Person.objects.order_by('name')[:10]
-    template = 'aidooit_people/index.html'
-    context = {
-        'people_list': people_list,
-    }
-    return render(request, template, context)
+class IndexView(generic.ListView):
+    """Generic view for index."""
+
+    template_name = 'aidooit_people/index.html'
+    context_object_name = 'people_list'
+
+    def get_queryset(self):
+        """Return the list of people."""
+        return Person.objects.order_by('name')
 
 
-def person_details(request, person_id):
-    """View with people details."""
-    person = get_object_or_404(Person, pk=person_id)
-    template = 'aidooit_people/person_details.html'
-    context = {
-        'person': person,
-    }
-    return render(request, template, context)
+class DetailView(generic.DetailView):
+    """Generic view for details."""
+
+    model = Person
+    template_name = 'aidooit_people/person_detail.html'

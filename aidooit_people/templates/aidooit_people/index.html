@@ -8,7 +8,7 @@
     {% if people_list %}
         <ul>
             {% for person in people_list %}
-                <li><a href="{% url 'aidooit_people:person_details' person.id %}">{{ person }}</a></li>
+                <li><a href="{% url 'aidooit_people:person_detail' person.id %}">{{ person }}</a></li>
             {% endfor %}
         </ul>
     {% else %}
