@@ -1,5 +1,4 @@
 """Core views for aidooit people."""
-from django.shortcuts import get_object_or_404, render
 from django.views import generic
 
 from .models import Person
@@ -20,4 +19,7 @@ class DetailView(generic.DetailView):
     """Generic view for details."""
 
     model = Person
+#	by default it return an object named person (like model name)
+#	use context_object_name if you want specify other
+#   context_object_name = 'other_name' 
     template_name = 'aidooit_people/person_detail.html'
