@@ -1,10 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>People index</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'aidooit_people/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'aidooit_core/css/style.css' %}">
+
 </head>
 <body>
-    <h1>Your are in people index :)</h1>
+    
+
+    <h1 class="people_font">Your are in people index :)</h1>
     {% if people_list %}
         <ul>
             {% for person in people_list %}
@@ -14,5 +21,7 @@
     {% else %}
         <p>No people are available :(</p>
     {% endif %}
+
+    <a class="core_font">Bye!</a>
 </body>
 </html>
