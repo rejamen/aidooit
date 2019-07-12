@@ -21,7 +21,7 @@ class Person(models.Model):
 class PersonHistory(models.Model):
     """Set of historical records."""
 
-    date = models.DateTimeField(default=timezone.now())
+    date = models.DateTimeField(default=timezone.now)
     description = models.CharField(max_length=500)
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
 
