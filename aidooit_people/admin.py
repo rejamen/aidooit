@@ -20,5 +20,9 @@ class PersonAdmin(admin.ModelAdmin):
 		('Other data', {'fields': ['mobile', 'phone', 'email']})
 	]
 	inlines = [HistoryInline]
+	list_display = ('name', 'last_name', 'mobile', 'phone', 'email')
+#	list_filter = ['name', 'mobile']
+	search_fields = ['name', 'last_name', 'mobile','phone', 'email' ]
+
 
 admin.site.register(Person, PersonAdmin)
