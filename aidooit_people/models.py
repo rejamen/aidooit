@@ -10,7 +10,7 @@ class Person(models.Model):
     last_name = models.CharField(max_length=100)
     mobile = models.CharField(max_length=20, blank=True)
     phone = models.CharField(max_length=20, blank=True)
-    email = models.CharField(max_length=40, blank=True)
+    email = models.EmailField(blank=True)
 
     def __str__(self):
         """How str is displayed."""
