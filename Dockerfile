@@ -10,7 +10,7 @@ RUN mkdir /code
 ENV WEBAPP_DIR=/code
 WORKDIR $WEBAPP_DIR
 
-ADD requirements.txt /code
-RUN pip install -r requirements.txt
+COPY requirements.txt /code
+RUN pip install -r /code/requirements.txt
 
-ADD . $WEBAPP_DIR/
+COPY . $WEBAPP_DIR/
