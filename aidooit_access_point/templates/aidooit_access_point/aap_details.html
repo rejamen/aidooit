@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AAP details</title>
+</head>
+<body>
+    <h1>Your are looking details for AAP:</h1>
+    {% if aap %}
+        <li> Name: {{ aap.name }}</li>
+        <li> Description: {{ aap.description }}</li>
+        <li> Address: {{ aap.address }}</li>
+    {% endif %}
+
+</body>
+</html>

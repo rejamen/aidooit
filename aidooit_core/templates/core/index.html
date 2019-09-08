@@ -10,5 +10,18 @@
 <body>
     <h1 class="core_font">Hi folks!</h1>
     <p><h2> Welcome to aidooit :)</h2></p>
+
+    <p>
+        <h2>
+            <li><a href="{% url 'aidooit_people:people_index' %}">People</a></li>
+        </h2>
+        <h2>
+            <li><a href="{% url 'aidooit_login:login_index' %}">Login Data</a></li>
+        </h2>
+        <h2>
+            <li><a href="{% url 'aidooit_access_point:aap_index' %}">AAPs</a></li>
+        </h2>
+
+    </p>
 </body>
 </html>

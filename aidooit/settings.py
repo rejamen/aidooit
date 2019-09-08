@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'aidooit_core',
     'aidooit_people',
+    'aidooit_login',
+    'aidooit_access_point',
 ]
 
 MIDDLEWARE = [

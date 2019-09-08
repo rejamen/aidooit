@@ -19,7 +19,7 @@ class DetailView(generic.DetailView):
     """Generic view for details."""
 
     model = Person
-#	by default it return an object named person (like model name)
-#	use context_object_name if you want specify other
-#   context_object_name = 'other_name' 
+    #  by default it return an object named person (like model name)
+    #  use context_object_name if you want specify other
+    #  context_object_name = 'other_name'
     template_name = 'aidooit_people/person_detail.html'

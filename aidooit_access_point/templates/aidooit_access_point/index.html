@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AAP index</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'aidooit_access_point/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'aidooit_core/css/style.css' %}">
+
+</head>
+<body>
+
+
+    <h1 class="aap_font">Your are in AAP index :)</h1>
+    {% if aap_list %}
+        <ul>
+            {% for aap in aap_list %}
+                <li><a href="{% url 'aidooit_access_point:aap_details' aap.id %}">{{ aap }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No login data available :(</p>
+    {% endif %}
+
+    <a class="core_font">Where do you come from?</a>
+</body>
+</html>

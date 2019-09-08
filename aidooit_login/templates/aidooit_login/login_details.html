@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login details</title>
+</head>
+<body>
+    <h1>Your are looking details for Login:</h1>
+    {% if login %}
+        <li> Person: {{ login.person }}</li>
+        <li> Date: {{ login.date }}</li>
+        <li> AAP: {{ login.aap }}</li>
+
+    {% endif %}
+
+</body>
+</html>

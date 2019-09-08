@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login index</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'aidooit_login/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'aidooit_core/css/style.css' %}">
+
+</head>
+<body>
+
+    <h1 class="login_font">You are in login index :)</h1>
+    {% if login_list %}
+        <ul>
+            {% for login in login_list %}
+                <li><a href="{% url 'aidooit_login:login_details' login.id %}">{{ login }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No login data available :(</p>
+    {% endif %}
+    <a class="core_font">Have a nice day!</a>
+
+</body>
+</html>

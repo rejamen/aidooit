@@ -1,25 +1,25 @@
-"""Core views for aidooit login."""
+"""Core views for aidooit access point."""
 from django.views import generic
 
-from .models import Login
+from .models import AidooitAccessPoint
 
 
 class IndexView(generic.ListView):
     """Generic view for index."""
 
-    template_name = 'aidooit_login/index.html'
-    context_object_name = 'login_list'
+    template_name = 'aidooit_access_point/index.html'
+    context_object_name = 'aap_list'
 
     def get_queryset(self):
         """Return the list of login."""
-        return Login.objects.order_by('date')
+        return AidooitAccessPoint.objects.order_by('name')
 
 
 class DetailView(generic.DetailView):
     """Generic view for details."""
 
-    model = Login
+    model = AidooitAccessPoint
     #  by default it return an object named person (like model name)
     #  use context_object_name if you want specify other
-    #  context_object_name = 'other_name'
-    template_name = 'aidooit_login/login_details.html'
+    context_object_name = 'aap'
+    template_name = 'aidooit_access_point/aap_details.html'
