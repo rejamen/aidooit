@@ -6,4 +6,6 @@ app_name = 'aidooit_login'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='login_index'),
     path('<int:pk>/', views.DetailView.as_view(), name='login_details'),
+    path('api/', views.LoginList.as_view()),
+    path('api/<int:pk>/', views.LoginDetail.as_view()),
 ]

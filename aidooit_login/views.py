@@ -1,7 +1,8 @@
 """Core views for aidooit login."""
 from django.views import generic
-
+from rest_framework import generics
 from .models import Login
+from .serializers import LoginSerializer
 
 
 class IndexView(generic.ListView):
@@ -23,3 +24,15 @@ class DetailView(generic.DetailView):
     #  use context_object_name if you want specify other
     #  context_object_name = 'other_name'
     template_name = 'aidooit_login/login_details.html'
+
+
+class LoginList(generics.ListCreateAPIView):
+    """List of login for API."""
+    queryset = Login.objects.all()
+    serializer_class = LoginSerializer
+
+
+class LoginDetail(generics.RetrieveUpdateDestroyAPIView):
+    """Login details for API."""
+    queryset = Login.objects.all()
+    serializer_class = LoginSerializer
