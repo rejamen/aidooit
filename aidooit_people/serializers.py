@@ -8,4 +8,4 @@ class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
         fields = ('id', 'name', 'last_name', 'mobile',
-                  'phone', 'email', )
+                  'phone', 'email', 'access_key')

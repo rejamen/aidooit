@@ -4,3 +4,4 @@ djangorestframework
 reportlab
 django-crispy-forms
 Pillow
+django-qr-code
